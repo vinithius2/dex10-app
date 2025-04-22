@@ -10,13 +10,7 @@ const Hero = () => {
   return (
     <section className="py-16 md:py-24 overflow-hidden">
       <div className="container flex flex-col items-center text-center">
-        <div className="w-64 h-64 mb-8 animate-fade-in">
-          <img 
-            src="/dex10-logo.png" 
-            alt="Dex10 Logo" 
-            className="w-full h-full object-contain"
-          />
-        </div>
+        {/* Removed logo div */}
         
         <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-dex-red to-dex-blue bg-clip-text text-transparent animate-fade-in">
           {t.hero_title}
