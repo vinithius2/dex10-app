@@ -37,7 +37,14 @@ const Hero = () => {
               {t.download_now}
             </a>
           </Button>
-          <Button variant="outline" size="lg" className="border-dex-blue text-dex-blue hover:bg-dex-blue hover:text-white">
+          {/* Learn More button disabled; indicate coming soon */}
+          <Button 
+            variant="outline"
+            size="lg"
+            className="border-dex-blue text-dex-blue opacity-50 cursor-not-allowed"
+            disabled
+            title="Coming soon"
+          >
             {t.learn_more}
           </Button>
         </div>
