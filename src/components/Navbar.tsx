@@ -1,9 +1,13 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Download, Book, Heart, Search, Filter } from "lucide-react";
+import { Download } from "lucide-react";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useLocale } from "@/context/LocaleContext";
 
 const Navbar = () => {
+  const { t } = useLocale();
+
   return (
     <nav className="bg-white py-4 sticky top-0 z-50 shadow-sm">
       <div className="container flex items-center justify-between">
@@ -15,15 +19,24 @@ const Navbar = () => {
         </Link>
         
         <div className="hidden md:flex items-center gap-6">
-          <Link to="#features" className="text-dex-darkGray hover:text-dex-red transition-colors">Features</Link>
-          <Link to="#about" className="text-dex-darkGray hover:text-dex-red transition-colors">About</Link>
-          <Link to="#faq" className="text-dex-darkGray hover:text-dex-red transition-colors">FAQ</Link>
+          <Link to="#features" className="text-dex-darkGray hover:text-dex-red transition-colors">
+            {t.features}
+          </Link>
+          <Link to="#about" className="text-dex-darkGray hover:text-dex-red transition-colors">
+            {t.about}
+          </Link>
+          <Link to="#faq" className="text-dex-darkGray hover:text-dex-red transition-colors">
+            {t.faq}
+          </Link>
         </div>
-        
-        <Button className="bg-dex-red hover:bg-dex-darkRed text-white">
-          <Download className="mr-2 h-4 w-4" />
-          Download
-        </Button>
+
+        <div className="flex items-center gap-4">
+          <LanguageSwitcher />
+          <Button className="bg-dex-red hover:bg-dex-darkRed text-white">
+            <Download className="mr-2 h-4 w-4" />
+            {t.download}
+          </Button>
+        </div>
       </div>
     </nav>
   );
