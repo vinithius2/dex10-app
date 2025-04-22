@@ -1,9 +1,10 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useLocale } from "@/context/LocaleContext";
+
+const DOWNLOAD_LINK = "https://play.google.com/store/apps/details?id=com.vinithius.dex10";
 
 const Navbar = () => {
   const { t } = useLocale();
@@ -32,9 +33,11 @@ const Navbar = () => {
 
         <div className="flex items-center gap-4">
           <LanguageSwitcher />
-          <Button className="bg-dex-red hover:bg-dex-darkRed text-white">
-            <Download className="mr-2 h-4 w-4" />
-            {t.download}
+          <Button asChild className="bg-dex-red hover:bg-dex-darkRed text-white">
+            <a href={DOWNLOAD_LINK} target="_blank" rel="noopener noreferrer">
+              <Download className="mr-2 h-4 w-4" />
+              {t.download}
+            </a>
           </Button>
         </div>
       </div>

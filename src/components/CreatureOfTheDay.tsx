@@ -1,16 +1,19 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useLocale } from "@/context/LocaleContext";
 
 const CreatureOfTheDay = () => {
+  const { t } = useLocale();
+
   return (
     <section className="py-16 bg-white">
       <div className="container">
         <div className="text-center mb-12">
-          <Badge className="mb-2 bg-dex-blue text-white border-none">Daily Feature</Badge>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Creature of the Day</h2>
+          <Badge className="mb-2 bg-dex-blue text-white border-none">{t.cotd_daily_feature}</Badge>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">{t.cotd_title}</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Discover something new every day with our featured pocket monster
+            {t.cotd_description}
           </p>
         </div>
 
@@ -28,40 +31,39 @@ const CreatureOfTheDay = () => {
           <Card className="border-none shadow-lg bg-white">
             <CardContent className="p-8">
               <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-bold">Mystery Creature</h3>
+                <h3 className="text-2xl font-bold">{t.cotd_mystery}</h3>
                 <div className="flex space-x-2">
-                  <Badge className="bg-blue-500 hover:bg-blue-600">Water</Badge>
-                  <Badge className="bg-red-500 hover:bg-red-600">Fire</Badge>
+                  <Badge className="bg-blue-500 hover:bg-blue-600">{t.cotd_type1}</Badge>
+                  <Badge className="bg-red-500 hover:bg-red-600">{t.cotd_type2}</Badge>
                 </div>
               </div>
               <div className="space-y-4 mb-6">
                 <div>
-                  <h4 className="font-medium text-gray-500">Description</h4>
+                  <h4 className="font-medium text-gray-500">{t.cotd_desc_label}</h4>
                   <p className="text-gray-800">
-                    This mysterious creature appears only to those who are pure of heart. 
-                    With abilities that span multiple elements, it's a versatile addition to any team.
+                    {t.cotd_desc}
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-medium text-gray-500">Abilities</h4>
+                  <h4 className="font-medium text-gray-500">{t.cotd_abilities}</h4>
                   <p className="text-gray-800">
-                    Adaptability, Protean, Mystery Veil
+                    {t.cotd_abilities_val}
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-medium text-gray-500">Evolution</h4>
+                  <h4 className="font-medium text-gray-500">{t.cotd_evo}</h4>
                   <p className="text-gray-800">
-                    Evolves under special circumstances at level 40+
+                    {t.cotd_evo_val}
                   </p>
                 </div>
               </div>
               <div className="flex justify-between items-center">
                 <div>
-                  <span className="block text-sm font-medium text-gray-500">Appears in</span>
-                  <span className="font-semibold">Latest Generation</span>
+                  <span className="block text-sm font-medium text-gray-500">{t.cotd_appears_in}</span>
+                  <span className="font-semibold">{t.cotd_latest_gen}</span>
                 </div>
                 <button className="text-dex-blue hover:text-dex-red transition-colors flex items-center">
-                  <span className="mr-1">View full details</span>
+                  <span className="mr-1">{t.cotd_view_details}</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                   </svg>

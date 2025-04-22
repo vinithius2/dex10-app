@@ -1,6 +1,7 @@
 
 import { Book, Search, Heart, Star, Wifi, Filter, Calendar, Smartphone, MessageCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useLocale } from "@/context/LocaleContext";
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -21,46 +22,47 @@ const FeatureCard = ({ icon, title, description }: FeatureCardProps) => (
 );
 
 const Features = () => {
+  const { t } = useLocale();
   const features = [
     {
       icon: <Book className="h-6 w-6" />,
-      title: "1,000+ Creatures",
-      description: "Full data on types, abilities, moves, evolutions, and descriptions for all creatures."
+      title: t.feat_creatures,
+      description: t.feat_creatures_desc,
     },
     {
       icon: <Wifi className="h-6 w-6" />,
-      title: "Offline List Available",
-      description: "Access basic information offline, with detailed data when connected."
+      title: t.feat_offline,
+      description: t.feat_offline_desc,
     },
     {
       icon: <Filter className="h-6 w-6" />,
-      title: "Advanced Filters",
-      description: "Search by type, generation, region, and many more categories."
+      title: t.feat_filters,
+      description: t.feat_filters_desc,
     },
     {
       icon: <Calendar className="h-6 w-6" />,
-      title: "Creature of the Day",
-      description: "Discover a new fascinating creature with each day that passes."
+      title: t.feat_daily,
+      description: t.feat_daily_desc,
     },
     {
       icon: <Heart className="h-6 w-6" />,
-      title: "Favorites System",
-      description: "Save and organize your favorite creatures for quick access."
+      title: t.feat_favorites,
+      description: t.feat_favorites_desc,
     },
     {
       icon: <Star className="h-6 w-6" />,
-      title: "Frequent Updates",
-      description: "Stay current with the latest creature data and app features."
+      title: t.feat_updates,
+      description: t.feat_updates_desc,
     },
     {
       icon: <Smartphone className="h-6 w-6" />,
-      title: "No Login Required",
-      description: "Jump straight into the experience without creating an account."
+      title: t.feat_nologin,
+      description: t.feat_nologin_desc,
     },
     {
       icon: <MessageCircle className="h-6 w-6" />,
-      title: "Developer Feedback",
-      description: "Send suggestions directly through the app to shape future updates."
+      title: t.feat_feedback,
+      description: t.feat_feedback_desc,
     },
   ];
 
@@ -68,9 +70,9 @@ const Features = () => {
     <section className="py-16 bg-gray-50" id="features">
       <div className="container">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Key Features</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">{t.key_features}</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Everything you need to enhance your pocket monster experience in one powerful app
+            {t.key_features_desc}
           </p>
         </div>
 
