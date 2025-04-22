@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Download, Instagram, Facebook, Reddit, Mail } from "lucide-react";
+import { Download, Instagram, Facebook, Mail } from "lucide-react";
 import { useLocale } from "@/context/LocaleContext";
 
 const DOWNLOAD_LINK = "https://play.google.com/store/apps/details?id=com.vinithius.dex10";
@@ -72,7 +72,15 @@ const Footer = () => {
               </a>
               <a href="https://www.reddit.com/r/Poke10" target="_blank" rel="noopener noreferrer" className="text-white hover:text-dex-blue transition-colors">
                 <span className="sr-only">Reddit</span>
-                <Reddit className="h-6 w-6" />
+                {/* Replace Reddit with a more generic icon from lucide-react */}
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9 12h.01"></path>
+                  <path d="M15 12h.01"></path>
+                  <path d="M16 10v.01"></path>
+                  <path d="M8 10v.01"></path>
+                  <path d="M9 16c0 1 1.5 2 3 2s3-1 3-2"></path>
+                </svg>
               </a>
               <a href={`mailto:${t.feedback_mail}`} className="text-white hover:text-dex-blue transition-colors">
                 <span className="sr-only">Email</span>
