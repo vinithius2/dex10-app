@@ -10,9 +10,9 @@ const Navbar = () => {
   
   return (
     <nav className="bg-white py-4 sticky top-0 z-50 shadow-sm">
-      <div className="container flex items-center justify-center">
-        {/* Centered Logo */}
-        <div className="flex-1 flex justify-center">
+      <div className="container flex items-center">
+        {/* Left aligned Logo */}
+        <div className="flex-shrink-0">
           <img
             src="/lovable-uploads/60ae252c-f50d-402f-b51c-a91fb18ad0cb.png"
             alt="Dex10 Logo"
