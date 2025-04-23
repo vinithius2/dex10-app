@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 // Define locales with new marketing text keys
@@ -25,16 +26,24 @@ const locales = {
   // Add translations for other languages similarly
 };
 
+// Define language display names
+const languageDisplay = {
+  en: "English",
+  es: "Español",
+};
+
 interface LocaleContextProps {
   locale: string;
   setLocale: (locale: string) => void;
   t: any;
+  languageDisplay: Record<string, string>;
 }
 
 const LocaleContext = createContext<LocaleContextProps>({
   locale: 'en',
   setLocale: () => {},
   t: locales.en,
+  languageDisplay,
 });
 
 interface LocaleProviderProps {
@@ -47,7 +56,7 @@ const LocaleProvider: React.FC<LocaleProviderProps> = ({ children }) => {
   const t = locales[locale] || locales.en;
 
   return (
-    <LocaleContext.Provider value={{ locale, setLocale, t }}>
+    <LocaleContext.Provider value={{ locale, setLocale, t, languageDisplay }}>
       {children}
     </LocaleContext.Provider>
   );
