@@ -9,6 +9,14 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   const { t } = useLocale();
   
+  // Safe replacement function to handle potentially undefined values
+  const replaceCopyrightYear = () => {
+    if (typeof t.copyright === 'string') {
+      return t.copyright.replace("{year}", String(currentYear));
+    }
+    return `© ${currentYear} Dex10 App. All rights reserved.`;
+  };
+  
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
       <div className="container">
@@ -99,7 +107,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="text-sm text-gray-600">
-            <p dangerouslySetInnerHTML={{ __html: t.copyright.replace("{year}", String(currentYear)) }} />
+            <p dangerouslySetInnerHTML={{ __html: replaceCopyrightYear() }} />
           </div>
         </div>
       </div>
