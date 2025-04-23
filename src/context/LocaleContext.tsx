@@ -116,10 +116,10 @@ const locales = {
     feat_feedback_desc: "Ponte en contacto con nosotros para sugerencias y ayuda"
   },
   pt: {
-    hero_title: "Liberte o poder dos números!",
-    hero_description: "Dex10 é sua maneira divertida e fácil de dominar matemática. Baixe agora e comece sua jornada para a excelência em matemática!",
+    hero_title: "Descubra todas as criaturas!",
+    hero_description: "Dex10 é seu guia completo para explorar e colecionar incríveis criaturas. Baixe agora e comece sua jornada de descobertas!",
     download_now: "Baixar Agora",
-    learn_more: "Saiba Mais",
+    learn_more: "", // Removed as requested
     cotd_marketing_title: "Criatura do Dia",
     cotd_marketing_desc: "Descubra uma criatura única e fascinante todos os dias! Toque para revelar e explorar as maravilhas de nossas incríveis criaturas.",
     cotd_reveal: "Revelar Criatura",
