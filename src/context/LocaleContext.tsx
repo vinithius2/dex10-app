@@ -1,7 +1,5 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-// Define locales with new marketing text keys
 const locales = {
   en: {
     hero_title: "Unleash the power of numbers!",
@@ -40,7 +38,25 @@ const locales = {
     faq_q3: "How often is the app updated?",
     faq_a3: "We release updates regularly to add new creatures, fix bugs, and improve features. Check for updates monthly!",
     faq_q4: "Can I suggest new features?",
-    faq_a4: "Absolutely! We love hearing from our users. Send your suggestions to our feedback email or social media channels."
+    faq_a4: "Absolutely! We love hearing from our users. Send your suggestions to our feedback email or social media channels.",
+    key_features: "Key Features",
+    key_features_desc: "Discover what makes Dex10 special",
+    feat_creatures: "Complete Creatures",
+    feat_creatures_desc: "Access detailed information on over 1,000 creatures",
+    feat_offline: "Offline Mode",
+    feat_offline_desc: "Use the app even without an internet connection",
+    feat_filters: "Advanced Filters",
+    feat_filters_desc: "Find exactly what you're looking for with our advanced search",
+    feat_daily: "Daily Content",
+    feat_daily_desc: "Discover a new creature every day",
+    feat_favorites: "Favorites",
+    feat_favorites_desc: "Mark and organize your favorite creatures",
+    feat_updates: "Regular Updates",
+    feat_updates_desc: "New creatures and features added frequently",
+    feat_nologin: "No Login",
+    feat_nologin_desc: "Start using immediately, no registration required",
+    feat_feedback: "Active Support",
+    feat_feedback_desc: "Contact us for suggestions and help"
   },
   es: {
     hero_title: "¡Libera el poder de los números!",
@@ -79,15 +95,89 @@ const locales = {
     faq_q3: "¿Con qué frecuencia se actualiza la aplicación?",
     faq_a3: "Lanzamos actualizaciones regularmente para agregar nuevas criaturas, corregir errores y mejorar funciones. ¡Busca actualizaciones mensualmente!",
     faq_q4: "¿Puedo sugerir nuevas funciones?",
-    faq_a4: "¡Absolutamente! Nos encanta escuchar a nuestros usuarios. Envía tus sugerencias a nuestro correo electrónico de comentarios o a nuestras redes sociales."
+    faq_a4: "¡Absolutamente! Nos encanta escuchar a nuestros usuarios. Envía tus sugerencias a nuestro correo electrónico de comentarios o a nuestras redes sociales.",
+    key_features: "Características Principales",
+    key_features_desc: "Descubre lo que hace especial a Dex10",
+    feat_creatures: "Criaturas Completas",
+    feat_creatures_desc: "Accede a información detallada sobre más de 1.000 criaturas",
+    feat_offline: "Modo Sin Conexión",
+    feat_offline_desc: "Usa la aplicación incluso sin conexión a Internet",
+    feat_filters: "Filtros Avanzados",
+    feat_filters_desc: "Encuentra exactamente lo que buscas con nuestra búsqueda avanzada",
+    feat_daily: "Contenido Diario",
+    feat_daily_desc: "Descubre una nueva criatura cada día",
+    feat_favorites: "Favoritos",
+    feat_favorites_desc: "Marca y organiza tus criaturas favoritas",
+    feat_updates: "Actualizaciones Regulares",
+    feat_updates_desc: "Nuevas criaturas y funciones añadidas con frecuencia",
+    feat_nologin: "Sin Inicio de Sesión",
+    feat_nologin_desc: "Empieza a usarla inmediatamente, sin necesidad de registrarte",
+    feat_feedback: "Soporte Activo",
+    feat_feedback_desc: "Ponte en contacto con nosotros para sugerencias y ayuda"
   },
-  // Add translations for other languages similarly
+  pt: {
+    hero_title: "Liberte o poder dos números!",
+    hero_description: "Dex10 é sua maneira divertida e fácil de dominar matemática. Baixe agora e comece sua jornada para a excelência em matemática!",
+    download_now: "Baixar Agora",
+    learn_more: "Saiba Mais",
+    cotd_marketing_title: "Criatura do Dia",
+    cotd_marketing_desc: "Descubra uma criatura única e fascinante todos os dias! Toque para revelar e explorar as maravilhas de nossas incríveis criaturas.",
+    cotd_reveal: "Revelar Criatura",
+    ready_adventure: "Pronto para uma aventura?",
+    ready_adventure_desc: "Baixe o Dex10 agora e comece sua jornada para descobrir todas as criaturas incríveis!",
+    links: "Links",
+    features: "Recursos",
+    privacy_policy: "Política de Privacidade",
+    contact: "Contato",
+    connect: "Conecte-se",
+    faq_desc: "Tem perguntas? Siga-nos nas redes sociais para atualizações e suporte!",
+    feedback_mail: "feedback@dex10app.com",
+    legal_disclaimer_title: "Aviso Legal",
+    legal_disclaimer: "Dex10 é um aplicativo criado por fãs e não está afiliado, endossado ou relacionado a nenhuma empresa de jogos. Todos os nomes de criaturas, imagens e conteúdo relacionado são propriedade de seus respectivos donos.",
+    copyright: "© {year} Dex10 App. Todos os direitos reservados.",
+    encyclopedia_title: "Enciclopédia Completa de Criaturas",
+    encyclopedia_desc: "Acesse informações detalhadas sobre mais de 1.000 criaturas, incluindo estatísticas, habilidades, evoluções e mais!",
+    comprehensive_db: "Banco de Dados Completo",
+    comprehensive_db_desc: "Acesse informações completas sobre todas as criaturas, incluindo estatísticas, habilidades e evoluções.",
+    advanced_search: "Busca Avançada",
+    advanced_search_desc: "Encontre exatamente o que está procurando com poderosas opções de filtro e classificação.",
+    personalized_experience: "Experiência Personalizada",
+    personalized_experience_desc: "Acompanhe seus favoritos e crie listas personalizadas para uma experiência sob medida.",
+    faq_title: "Perguntas Frequentes",
+    faq_q1: "O Dex10 é gratuito?",
+    faq_a1: "Sim! O Dex10 é completamente gratuito para baixar e usar. Existem compras opcionais no aplicativo para recursos premium.",
+    faq_q2: "Preciso de conexão com a internet?",
+    faq_a2: "A maioria dos recursos básicos funciona offline após o download inicial. Conexão online é necessária para atualizações e alguns recursos avançados.",
+    faq_q3: "Com que frequência o aplicativo é atualizado?",
+    faq_a3: "Lançamos atualizações regularmente para adicionar novas criaturas, corrigir bugs e melhorar recursos. Verifique as atualizações mensalmente!",
+    faq_q4: "Posso sugerir novos recursos?",
+    faq_a4: "Absolutamente! Adoramos ouvir nossos usuários. Envie suas sugestões para nosso e-mail de feedback ou redes sociais.",
+    key_features: "Recursos Principais",
+    key_features_desc: "Descubra o que torna o Dex10 especial",
+    feat_creatures: "Criaturas Completas",
+    feat_creatures_desc: "Acesse informações detalhadas sobre mais de 1.000 criaturas",
+    feat_offline: "Modo Offline",
+    feat_offline_desc: "Use o aplicativo mesmo sem conexão com a internet",
+    feat_filters: "Filtros Avançados",
+    feat_filters_desc: "Encontre exatamente o que procura com nossa busca avançada",
+    feat_daily: "Conteúdo Diário",
+    feat_daily_desc: "Descubra uma nova criatura todos os dias",
+    feat_favorites: "Favoritos",
+    feat_favorites_desc: "Marque e organize suas criaturas favoritas",
+    feat_updates: "Atualizações Regulares",
+    feat_updates_desc: "Novas criaturas e recursos adicionados frequentemente",
+    feat_nologin: "Sem Login",
+    feat_nologin_desc: "Comece a usar imediatamente, sem necessidade de cadastro",
+    feat_feedback: "Suporte Ativo",
+    feat_feedback_desc: "Entre em contato conosco para sugestões e ajuda"
+  }
 };
 
-// Define language display names
+// Update language display names to include Portuguese
 const languageDisplay = {
   en: "English",
   es: "Español",
+  pt: "Português"
 };
 
 interface LocaleContextProps {
