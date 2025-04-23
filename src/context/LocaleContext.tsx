@@ -2,9 +2,8 @@ import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 const locales = {
   en: {
-    hero_title: "Unleash the power of numbers!",
-    hero_description:
-      "Dex10 is your fun and easy way to master math. Download now and start your journey to math excellence!",
+    hero_title: "Discover all creatures!",
+    hero_description: "Dex10 is your complete guide to explore and collect amazing creatures. Download now and start your journey of discoveries!",
     download_now: "Download Now",
     learn_more: "Learn More",
     cotd_marketing_title: "Creature of the Day",
@@ -59,9 +58,8 @@ const locales = {
     feat_feedback_desc: "Contact us for suggestions and help"
   },
   es: {
-    hero_title: "¡Libera el poder de los números!",
-    hero_description:
-      "Dex10 es tu manera fácil y divertida de dominar las matemáticas. ¡Descarga ahora y comienza tu viaje hacia la excelencia matemática!",
+    hero_title: "¡Descubre todas las criaturas!",
+    hero_description: "Dex10 es tu guía completa para explorar y coleccionar criaturas increíbles. ¡Descárgala ahora y comienza tu viaje de descubrimientos!",
     download_now: "Descargar Ahora",
     learn_more: "Aprende Más",
     cotd_marketing_title: "Criatura del Día",
@@ -172,8 +170,8 @@ const locales = {
     feat_feedback_desc: "Entre em contato conosco para sugestões e ajuda"
   },
   hi: {
-    hero_title: "संख्याओं की शक्ति को मुक्त करें!",
-    hero_description: "Dex10 गणित में महारत हासिल करने का आपका मजेदार और आसान तरीका है। अभी डाउनलोड करें और गणित में उत्कृष्टता की अपनी यात्रा शुरू करें!",
+    hero_title: "सभी जीवों की खोज करें!",
+    hero_description: "Dex10 आपकी अद्भुत जीवों की खोज और संग्रह के लिए आपकी पूर्ण मार्गदर्शिका है। अभी डाउनलोड करें और अपनी खोज यात्रा शुरू करें!",
     download_now: "अभी डाउनलोड करें",
     learn_more: "और जानें",
     cotd_marketing_title: "आज का जीव",
@@ -228,8 +226,8 @@ const locales = {
     feat_feedback_desc: "सुझावों और सहायता के लिए हमसे संपर्क करें"
   },
   zh: {
-    hero_title: "释放数字的力量！",
-    hero_description: "Dex10是您掌握数学的有趣简单方式。立即下载，开启您的数学卓越之旅！",
+    hero_title: "发现所有生物！",
+    hero_description: "Dex10是您探索和收集神奇生物的完整指南。立即下载，开启您的探索之旅！",
     download_now: "立即下载",
     learn_more: "了解更多",
     cotd_marketing_title: "每日生物",
@@ -284,8 +282,8 @@ const locales = {
     feat_feedback_desc: "联系我们获取建议和帮助"
   },
   fr: {
-    hero_title: "Libérez la puissance des nombres !",
-    hero_description: "Dex10 est votre moyen amusant et facile de maîtriser les mathématiques. Téléchargez maintenant et commencez votre voyage vers l'excellence en mathématiques !",
+    hero_title: "Découvrez toutes les créatures !",
+    hero_description: "Dex10 est votre guide complet pour explorer et collectionner des créatures incroyables. Téléchargez maintenant et commencez votre voyage de découvertes !",
     download_now: "Télécharger Maintenant",
     learn_more: "En Savoir Plus",
     cotd_marketing_title: "Créature du Jour",

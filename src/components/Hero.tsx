@@ -10,8 +10,6 @@ const Hero = () => {
   return (
     <section className="py-16 md:py-24 overflow-hidden">
       <div className="container flex flex-col items-center text-center">
-        {/* Removed logo div */}
-        
         <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-dex-red to-dex-blue bg-clip-text text-transparent animate-fade-in">
           {t.hero_title}
         </h1>
@@ -20,7 +18,7 @@ const Hero = () => {
           {t.hero_description}
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 animate-fade-in">
+        <div className="animate-fade-in">
           <Button
             asChild
             size="lg"
@@ -30,16 +28,6 @@ const Hero = () => {
               <Download className="mr-2 h-5 w-5" />
               {t.download_now}
             </a>
-          </Button>
-          {/* Learn More button disabled; indicate coming soon */}
-          <Button 
-            variant="outline"
-            size="lg"
-            className="border-dex-blue text-dex-blue opacity-50 cursor-not-allowed"
-            disabled
-            title="Coming soon"
-          >
-            {t.learn_more}
           </Button>
         </div>
 
