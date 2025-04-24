@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <section className="py-16 md:py-24 overflow-hidden">
       <div className="container flex flex-col items-center text-center">
-        <div className="w-[80%] max-w-4xl mb-12 relative">
+        <div className="w-[60%] max-w-4xl mb-12 relative">
           <img
             src="/lovable-uploads/0386d383-8d66-4d2f-a1ac-84062562753e.png"
             alt="Dex10 App Screenshots"
