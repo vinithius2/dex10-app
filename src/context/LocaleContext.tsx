@@ -55,7 +55,8 @@ const locales = {
     feat_nologin: "No Login",
     feat_nologin_desc: "Start using immediately, no registration required",
     feat_feedback: "Active Support",
-    feat_feedback_desc: "Contact us for suggestions and help"
+    feat_feedback_desc: "Contact us for suggestions and help",
+    cotd_marketing: "Discover a new Creature of the Day every day in Dex10! Click below to reveal today's featured monster. Come back tomorrow for another exciting surprise and expand your collection!",
   },
   es: {
     hero_title: "¡Descubre todas las criaturas!",
@@ -111,7 +112,8 @@ const locales = {
     feat_nologin: "Sin Inicio de Sesión",
     feat_nologin_desc: "Empieza a usarla inmediatamente, sin necesidad de registrarte",
     feat_feedback: "Soporte Activo",
-    feat_feedback_desc: "Ponte en contacto con nosotros para sugerencias y ayuda"
+    feat_feedback_desc: "Ponte en contacto con nosotros para sugerencias y ayuda",
+    cotd_marketing: "¡Descubre una nueva Criatura del Día todos los días en Dex10! Haz clic abajo para revelar el monstruo destacado de hoy. ¡Vuelve mañana para otra sorpresa emocionante y expande tu colección!",
   },
   pt: {
     hero_title: "Descubra todas as criaturas!",
@@ -167,7 +169,8 @@ const locales = {
     feat_nologin: "Sem Login",
     feat_nologin_desc: "Comece a usar imediatamente, sem necessidade de cadastro",
     feat_feedback: "Suporte Ativo",
-    feat_feedback_desc: "Entre em contato conosco para sugestões e ajuda"
+    feat_feedback_desc: "Entre em contato conosco para sugestões e ajuda",
+    cotd_marketing: "Descubra uma nova Criatura do Dia todos os dias no Dex10! Clique abaixo para revelar o monstro em destaque hoje. Volte amanhã para outra surpresa emocionante e expanda sua coleção!",
   },
   hi: {
     hero_title: "सभी जीवों की खोज करें!",
@@ -223,7 +226,8 @@ const locales = {
     feat_nologin: "लॉगिन की आवश्यकता नहीं",
     feat_nologin_desc: "तुरंत उपयोग शुरू करें, पंजीकरण की आवश्यकता नहीं",
     feat_feedback: "सक्रिय समर्थन",
-    feat_feedback_desc: "सुझावों और सहायता के लिए हमसे संपर्क करें"
+    feat_feedback_desc: "सुझावों और सहायता के लिए हमसे संपर्क करें",
+    cotd_marketing: "Dex10 में हर दिन एक नई क्रीचर ऑफ़ द डे खोजें! आज के विशेष मॉन्स्टर को देखने के लिए नीचे क्लिक करें। एक और रोमांचक आश्चर्य के लिए कल वापस आएं और अपना संग्रह बढ़ाएं!",
   },
   zh: {
     hero_title: "发现所有生物！",
@@ -279,7 +283,8 @@ const locales = {
     feat_nologin: "无需登录",
     feat_nologin_desc: "立即开始使用，无需注册",
     feat_feedback: "积极支持",
-    feat_feedback_desc: "联系我们获取建议和帮助"
+    feat_feedback_desc: "联系我们获取建议和帮助",
+    cotd_marketing: "在Dex10中每天发现全新的每日生物！点击下方揭示今天的特色怪物。明天再来获取另一个精彩惊喜，扩展你的收藏！",
   },
   fr: {
     hero_title: "Découvrez toutes les créatures !",
@@ -335,7 +340,8 @@ const locales = {
     feat_nologin: "Sans Connexion",
     feat_nologin_desc: "Commencez à utiliser immédiatement, sans inscription requise",
     feat_feedback: "Support Actif",
-    feat_feedback_desc: "Contactez-nous pour des suggestions et de l'aide"
+    feat_feedback_desc: "Contactez-nous pour des suggestions et de l'aide",
+    cotd_marketing: "Découvrez une nouvelle Créature du Jour chaque jour dans Dex10 ! Cliquez ci-dessous pour révéler le monstre vedette d'aujourd'hui. Revenez demain pour une autre surprise passionnante et agrandissez votre collection!",
   }
 };
 
