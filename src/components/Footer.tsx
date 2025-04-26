@@ -17,6 +17,10 @@ const Footer = () => {
     return `© ${currentYear} Dex10 App. All rights reserved.`;
   };
   
+  const handleEmailClick = () => {
+    window.location.href = `mailto:${t.feedback_mail}?subject=Contact Dex10&body=Hello, I would like to contact about Dex10...`;
+  };
+  
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
       <div className="container">
@@ -84,7 +88,7 @@ const Footer = () => {
                 <span className="sr-only">Facebook</span>
                 <Facebook className="h-6 w-6" />
               </a>
-              <a href="https://www.reddit.com/r/Poke10" target="_blank" rel="noopener noreferrer" className="text-white hover:text-dex-blue transition-colors">
+              <a href="https://www.reddit.com/r/Dex10/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-dex-blue transition-colors">
                 <span className="sr-only">Reddit</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
                   <circle cx="12" cy="12" r="10"></circle>
@@ -95,10 +99,10 @@ const Footer = () => {
                   <path d="M9 16c0 1 1.5 2 3 2s3-1 3-2"></path>
                 </svg>
               </a>
-              <a href={`mailto:${t.feedback_mail}`} className="text-white hover:text-dex-blue transition-colors">
+              <button onClick={handleEmailClick} className="text-white hover:text-dex-blue transition-colors">
                 <span className="sr-only">Email</span>
                 <Mail className="h-6 w-6" />
-              </a>
+              </button>
             </div>
           </div>
         </div>
