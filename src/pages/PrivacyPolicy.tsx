@@ -1,5 +1,10 @@
-
 import { useLocale } from "@/context/LocaleContext";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, Download } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const DOWNLOAD_LINK = "https://play.google.com/store/apps/details?id=com.vinithius.dex10";
+const AMAZON_DOWNLOAD_LINK = "https://www.amazon.com/dp/B0F69LKYGL";
 
 const PrivacyPolicy = () => {
   const { t } = useLocale();
@@ -8,6 +13,13 @@ const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto py-12 px-4">
+        <Button asChild variant="outline" className="mb-6">
+          <Link to="/">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            {t.back_to_home}
+          </Link>
+        </Button>
+
         <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-8">
           <h1 className="text-3xl font-bold text-gray-800 mb-6">Privacy Policy</h1>
           
@@ -62,6 +74,21 @@ const PrivacyPolicy = () => {
           <p className="text-gray-600 mb-6">
             Any updates to this Privacy Policy will be reflected on this page. By continuing to use the app, users agree to any modifications made.
           </p>
+
+          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center border-t pt-8">
+            <Button asChild>
+              <a href={DOWNLOAD_LINK} target="_blank" rel="noopener noreferrer">
+                <Download className="mr-2 h-5 w-5" />
+                Google Play
+              </a>
+            </Button>
+            <Button asChild variant="secondary">
+              <a href={AMAZON_DOWNLOAD_LINK} target="_blank" rel="noopener noreferrer">
+                <Download className="mr-2 h-5 w-5" />
+                Amazon Store
+              </a>
+            </Button>
+          </div>
 
           <footer className="mt-12 text-center text-gray-500 text-sm">
             © {currentYear} Dex10 by Marcos Vinithius. All rights reserved.
