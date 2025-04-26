@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Download, Instagram, Facebook, Mail } from "lucide-react";
 import { useLocale } from "@/context/LocaleContext";
+import { Link } from "react-router-dom";
 
 const DOWNLOAD_LINK = "https://play.google.com/store/apps/details?id=com.vinithius.dex10";
 
@@ -52,9 +53,9 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="https://poke10.web.app/privacypolicy.html" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+                <Link to="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">
                   {t.privacy_policy}
-                </a>
+                </Link>
               </li>
               <li>
                 <a href={`mailto:${t.feedback_mail}`} className="text-gray-400 hover:text-white transition-colors">
