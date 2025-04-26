@@ -1,3 +1,4 @@
+
 import { useLocale } from "@/context/LocaleContext";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
@@ -71,21 +72,6 @@ const PrivacyPolicy = () => {
           <p className="text-gray-600 mb-6">
             Any updates to this Privacy Policy will be reflected on this page. By continuing to use the app, users agree to any modifications made.
           </p>
-
-          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center border-t pt-8">
-            <Button asChild>
-              <a href={DOWNLOAD_LINK} target="_blank" rel="noopener noreferrer">
-                <Download className="mr-2 h-5 w-5" />
-                Google Play
-              </a>
-            </Button>
-            <Button asChild variant="secondary">
-              <a href={AMAZON_DOWNLOAD_LINK} target="_blank" rel="noopener noreferrer">
-                <Download className="mr-2 h-5 w-5" />
-                Amazon Store
-              </a>
-            </Button>
-          </div>
 
           <footer className="mt-12 text-center text-gray-500 text-sm">
             © {currentYear} Dex10 by Marcos Vinithius. All rights reserved.
