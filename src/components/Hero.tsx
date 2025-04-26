@@ -1,9 +1,9 @@
-
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import { useLocale } from "@/context/LocaleContext";
 
 const DOWNLOAD_LINK = "https://play.google.com/store/apps/details?id=com.vinithius.dex10";
+const AMAZON_DOWNLOAD_LINK = "https://www.amazon.com/dp/B0F69LKYGL";
 
 const Hero = () => {
   const { t } = useLocale();
@@ -26,7 +26,7 @@ const Hero = () => {
           {t.hero_description}
         </p>
         
-        <div className="animate-fade-in">
+        <div className="flex flex-col sm:flex-row gap-4 animate-fade-in">
           <Button
             asChild
             size="lg"
@@ -34,7 +34,17 @@ const Hero = () => {
           >
             <a href={DOWNLOAD_LINK} target="_blank" rel="noopener noreferrer">
               <Download className="mr-2 h-5 w-5" />
-              {t.download_now}
+              Google Play
+            </a>
+          </Button>
+          <Button
+            asChild
+            size="lg"
+            variant="secondary"
+          >
+            <a href={AMAZON_DOWNLOAD_LINK} target="_blank" rel="noopener noreferrer">
+              <Download className="mr-2 h-5 w-5" />
+              Amazon Store
             </a>
           </Button>
         </div>

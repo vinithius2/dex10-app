@@ -1,10 +1,7 @@
 import { useLocale } from "@/context/LocaleContext";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Download } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const DOWNLOAD_LINK = "https://play.google.com/store/apps/details?id=com.vinithius.dex10";
-const AMAZON_DOWNLOAD_LINK = "https://www.amazon.com/dp/B0F69LKYGL";
 
 const PrivacyPolicy = () => {
   const { t } = useLocale();
